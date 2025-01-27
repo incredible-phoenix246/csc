@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "../styles/globals.css";
+import "../styles/globals.scss";
 import { inter, jaka, workSans } from "@/fonts";
 import StateContextProvider from "@/context/StateCtx";
 import React from "react";

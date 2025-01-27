@@ -127,7 +127,7 @@ const CustomSidebar = () => {
           {/* Footer */}
 
           <div className="mt-auto p-4 font-mono text-gray-400 text-lg">
-            © {new Date().getFullYear()} CSPP
+            © {new Date().getFullYear()} CSC
           </div>
         </div>
       </motion.div>

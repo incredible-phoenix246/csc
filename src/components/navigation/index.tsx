@@ -166,7 +166,7 @@ const Footer = () => {
             <Image src="/logo2.webp" alt="logo" width={42} height={38} />
             {/*  */}
             <span className="self-center text-base md:text-2xl font-semibold whitespace-nowrap font-jaka">
-              CSPP
+              CSC
             </span>
           </Link>
           <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">

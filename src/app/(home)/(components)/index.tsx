@@ -58,7 +58,7 @@ const Herosection = () => {
       <div className="flex top-0 relative z-10 text-white h-full items-center w-full bg-black/70 justify-center px-2 sm:px-4 lg:px-8 transition-colors duration-500">
         <div className="flex flex-col justify-center gap-y-5 w-full max-w-[80%] md:max-w-[60%] items-center bg-[#052C42] bg-opacity-[30%] h-[400px] min-[800px]:h-[300px] lg:h-[400px] py-9 md:py-[40px] px-[3%]">
           <h2 className="font-medium text-4xl md:font-bold md:text-6xl text-center font-jaka">
-            Center for the Study of Police and Policing
+            Center Service Center
           </h2>
           {/* <p className="text-center text-lg font-worksans">
             providing opportunities to acquiring both basic and advanced
