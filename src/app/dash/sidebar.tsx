@@ -9,11 +9,11 @@ import Image from "next/image";
 import { cn } from "@/utils";
 
 const managementProfiles = [
-  { name: "Dr. Philip N.", slug: "philip-n" },
-  { name: "Dr. James Erhurh", slug: "james-erhurh" },
-  { name: "Bashir Gambo", slug: "bashir-gambo" },
-  { name: "Ado Sule", slug: "ado-sule" },
-  { name: "Nasfisa Muhd", slug: "nadi-muhd" },
+  { name: "Director.", slug: "philip-n" },
+  { name: "Deputy Director", slug: "james-erhurh" },
+  { name: "Head of Admin", slug: "bashir-gambo" },
+  { name: "Adminstrative officer", slug: "ado-sule" },
+  // { name: "Nasfisa Muhd", slug: "nadi-muhd" },
 ];
 
 const CustomSidebar = () => {
@@ -75,7 +75,7 @@ const CustomSidebar = () => {
 
           <nav className="flex-grow mt-8 gap-3">
             <NavItem href="/about" text="About" />
-            <NavItem href="/management" text="Management" />
+            {/* <NavItem href="/management" text="Management" /> */}
             <div className="px-4 py-2">
               <motion.button
                 className="flex items-center justify-between w-full text-gray-300 hover:text-white transition-colors duration-200"
