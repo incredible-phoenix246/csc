@@ -5,7 +5,7 @@ import { useParams } from "next/navigation";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Mail, Linkedin, Twitter } from "lucide-react";
-import { managementProfiles } from "./data";
+import { managementProfiles, servicesOffered } from "./data";
 
 const ProfilePage = () => {
   const { slug } = useParams();
@@ -39,36 +39,26 @@ const ProfilePage = () => {
           />
         </motion.div>
         <div className="flex-1">
-          <motion.h1
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
-            className="text-4xl font-bold mb-2 text-blue-main"
-          >
+          <h1 className="text-4xl font-bold mb-2 text-blue-main">
             {profile.name}
-          </motion.h1>
-          <motion.h2
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.5 }}
-            className="text-2xl text-gray-600 mb-4"
-          >
-            {profile.role}
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.5 }}
-            className="text-gray-700 leading-relaxed mb-6"
-          >
-            {profile.bio}
-          </motion.p>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.5 }}
-            className="flex space-x-4 mb-6"
-          >
+          </h1>
+          <h2 className="text-2xl text-gray-600 mb-4">{profile.role}</h2>
+          <p className="text-gray-700 leading-relaxed mb-6">{profile.bio}</p>
+
+          {/* Responsibilities */}
+          <h3 className="text-2xl font-semibold mb-3 text-blue-main">
+            Responsibilities
+          </h3>
+          <ul className="list-disc list-inside space-y-2 mb-6">
+            {profile.responsibilities.map((task, index) => (
+              <li key={index} className="text-gray-700">
+                {task}
+              </li>
+            ))}
+          </ul>
+
+          {/* Contact */}
+          <div className="flex space-x-4 mb-6">
             <a
               href={`mailto:${profile.email}`}
               className="flex items-center text-blue-main hover:text-blue-600 transition-colors duration-300"
@@ -94,32 +84,21 @@ const ProfilePage = () => {
               <Twitter className="mr-2" size={20} />
               Twitter
             </a>
-          </motion.div>
+          </div>
         </div>
       </div>
-      {/* <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.6, duration: 0.5 }}
-        className="mt-8"
-      >
-        <h3 className="text-2xl font-semibold mb-4 text-blue-main">
-          Key Achievements
-        </h3>
-        <ul className="list-disc list-inside space-y-2">
-          {profile.achievements.map((achievement, index) => (
-            <motion.li
-              key={index}
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.7 + index * 0.1, duration: 0.5 }}
-              className="text-gray-700"
-            >
-              {achievement}
-            </motion.li>
-          ))}
-        </ul>
-      </motion.div> */}
+
+      {/* Services Offered */}
+      <h3 className="text-2xl font-semibold mt-8 mb-4 text-blue-main">
+        Services Offered
+      </h3>
+      <ul className="list-disc list-inside space-y-2">
+        {servicesOffered.map((service, index) => (
+          <li key={index} className="text-gray-700">
+            {service}
+          </li>
+        ))}
+      </ul>
     </motion.div>
   );
 };

@@ -9,12 +9,16 @@ import Image from "next/image";
 import { cn } from "@/utils";
 
 const managementProfiles = [
-  { name: "Director.", slug: "philip-n" },
-  { name: "Deputy Director", slug: "james-erhurh" },
-  { name: "Head of Admin", slug: "bashir-gambo" },
-  { name: "Adminstrative officer", slug: "ado-sule" },
-  // { name: "Nasfisa Muhd", slug: "nadi-muhd" },
+  { name: "Mairo Yahaya Hassan", slug: "mairo-yahaya-hassan" },
+  { name: "Ezra Daniel", slug: "ezra-daniel" },
+  { name: "Muhammad Attahir", slug: "muhammad-attahir" },
+  { name: "Zainab Bello Duwap", slug: "zainab-bello-duwap" },
+  { name: "Nasir Babangida Shu’aibu", slug: "nasir-babangida-shuaibu" },
+  { name: "Sahalatu Ahmad", slug: "sahalatu-ahmad" },
+  { name: "Mustapha Salim", slug: "mustapha-salim" },
 ];
+
+
 
 const CustomSidebar = () => {
   const isMobile = useIsMobile();
